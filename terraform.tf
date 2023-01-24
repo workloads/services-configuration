@@ -14,7 +14,7 @@ terraform {
   required_providers {
     # see https://registry.terraform.io/providers/hashicorp/boundary/1.1.3
     boundary = {
-      source = "hashicorp/boundary"
+      source  = "hashicorp/boundary"
       version = "1.1.3"
     }
 
@@ -26,7 +26,7 @@ terraform {
 
     # see https://registry.terraform.io/providers/hashicorp/vault/3.12.0
     vault = {
-      source = "hashicorp/vault"
+      source  = "hashicorp/vault"
       version = "3.12.0"
     }
   }
