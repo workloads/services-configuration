@@ -17,6 +17,12 @@ terraform {
       source  = "hashicorp/hcp"
       version = ">= 0.53.0, < 1.0.0"
     }
+
+    # see https://registry.terraform.io/providers/hashicorp/vault/3.12.0
+    vault = {
+      source = "hashicorp/vault"
+      version = "3.12.0"
+    }
   }
 
   # see https://developer.hashicorp.com/terraform/language/settings#specifying-a-required-terraform-version
