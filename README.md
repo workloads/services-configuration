@@ -28,6 +28,7 @@
 | hcp_vault_cluster_id | The ID of the HCP Vault Cluster. | `string` | yes |
 | hcp_vault_token | The Token of the HCP Vault Cluster. | `string` | yes |
 | project_identifier | Human-readable Project Identifier. | `string` | yes |
+| providers | the providers variable allows for delineation of resources for multiple Cloud Service Providers (CSPs) | <pre>list(object({<br>    name = string<br>  }))</pre> | no |
 
 ### Outputs
 
