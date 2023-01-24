@@ -31,6 +31,7 @@
 
 | Name | Description |
 |------|-------------|
+| hcp_vault_cluster | Exported Attributes for `hcp_vault_cluster` data source. |
 | vault_kv_v2_vault_kv_secret_backend_v2 | Exported Attributes for `module.vault_kv_v2.vault_kv_secret_backend_v2`. |
 | vault_kv_v2_vault_mount | Exported Attributes for `module.vault_kv_v2.vault_mount`. |
 <!-- END_TF_DOCS -->
