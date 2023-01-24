@@ -1,4 +1,4 @@
-module "vault_kv_v2_" {
+module "vault_kv_v2" {
   source = "git@github.com:ksatirli/terraform-vault-kv-v2.git?ref=updates-structure"
   #version = "0.9.0"
 

@@ -7,12 +7,31 @@
 <!-- TOC -->
 * [Terraform Cloud Workspace: `services-configuration`](#terraform-cloud-workspace--services-configuration)
   * [Table of Contents](#table-of-contents)
+    * [Inputs](#inputs)
+    * [Outputs](#outputs)
+  * [Notes](#notes)
   * [Author Information](#author-information)
   * [License](#license)
+    * [Inputs](#inputs-1)
+    * [Outputs](#outputs-1)
 <!-- TOC -->
 
 <!-- BEGIN_TF_DOCS -->
+### Inputs
 
+| Name | Description | Type | Required |
+|------|-------------|------|:--------:|
+| hcp_boundary_admin_password | HCP Boundary Cluster Admin Password. | `string` | yes |
+| hcp_boundary_admin_username | HCP Boundary Cluster Admin Username. | `string` | yes |
+| hcp_vault_cluster_id | The ID of the HCP Vault Cluster. | `string` | yes |
+| hcp_vault_token | The Token of the HCP Vault Cluster. | `string` | yes |
+
+### Outputs
+
+| Name | Description |
+|------|-------------|
+| vault_kv_v2_vault_kv_secret_backend_v2 | Exported Attributes for `module.vault_kv_v2.vault_kv_secret_backend_v2`. |
+| vault_kv_v2_vault_mount | Exported Attributes for `module.vault_kv_v2.vault_mount`. |
 <!-- END_TF_DOCS -->
 
 ## Author Information
