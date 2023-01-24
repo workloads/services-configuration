@@ -12,6 +12,12 @@ terraform {
 
   # see https://developer.hashicorp.com/terraform/language/settings#specifying-provider-requirements
   required_providers {
+    # see https://registry.terraform.io/providers/hashicorp/boundary/1.1.3
+    boundary = {
+      source = "hashicorp/boundary"
+      version = "1.1.3"
+    }
+
     # see https://registry.terraform.io/providers/hashicorp/hcp/0.53.0/
     hcp = {
       source  = "hashicorp/hcp"

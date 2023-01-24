@@ -23,6 +23,7 @@
 |------|-------------|------|:--------:|
 | hcp_boundary_admin_password | HCP Boundary Cluster Admin Password. | `string` | yes |
 | hcp_boundary_admin_username | HCP Boundary Cluster Admin Username. | `string` | yes |
+| hcp_boundary_cluster_id | The ID of the HCP Boundary Cluster. | `string` | yes |
 | hcp_vault_cluster_id | The ID of the HCP Vault Cluster. | `string` | yes |
 | hcp_vault_token | The Token of the HCP Vault Cluster. | `string` | yes |
 | project_identifier | Human-readable Project Identifier. | `string` | yes |
@@ -31,6 +32,9 @@
 
 | Name | Description |
 |------|-------------|
+| boundary_scope_global | Exported Attributes for `boundary_scope.global`. |
+| boundary_scope_project | Exported Attributes for `boundary_scope.project`. |
+| hcp_boundary_cluster | Exported Attributes for `hcp_boundary_cluster` data source. |
 | hcp_vault_cluster | Exported Attributes for `hcp_vault_cluster` data source. |
 | vault_kv_v2_vault_kv_secret_backend_v2 | Exported Attributes for `module.vault_kv_v2.vault_kv_secret_backend_v2`. |
 | vault_kv_v2_vault_mount | Exported Attributes for `module.vault_kv_v2.vault_mount`. |

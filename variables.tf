@@ -11,6 +11,13 @@ variable "hcp_boundary_admin_password" {
   sensitive   = true
 }
 
+# this value is set in the `Boundary` Variable Set, inside Terraform Cloud
+# see https://app.terraform.io/app/workloads/settings/varsets/
+variable "hcp_boundary_cluster_id" {
+  type        = string
+  description = "The ID of the HCP Boundary Cluster."
+}
+
 # this value is set in the `Vault` Variable Set, inside Terraform Cloud
 # see https://app.terraform.io/app/workloads/settings/varsets/
 variable "hcp_vault_cluster_id" {
