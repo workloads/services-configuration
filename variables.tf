@@ -5,6 +5,25 @@ variable "hcp_boundary_admin_auth_method_id" {
   description = "HCP Boundary Cluster Admin Auth Method Identifier."
 }
 
+# the providers variable allows for delineation of resources for multiple Cloud Service Providers (CSPs)
+variable "providers" {
+  type = list(object({
+    name = string
+  }))
+
+  default = [
+    {
+      name = "AWS"
+    },
+    {
+      name = "GCP"
+    },
+    {
+      name = "Azure"
+    }
+  ]
+}
+
 # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
 variable "hcp_boundary_admin_username" {
   type        = string
