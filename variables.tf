@@ -1,3 +1,10 @@
+# TODO: replace with TF-managed value
+# see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
+variable "hcp_boundary_admin_auth_method_id" {
+  type        = string
+  description = "HCP Boundary Cluster Admin Auth Method Identifier."
+}
+
 # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
 variable "hcp_boundary_admin_username" {
   type        = string
