@@ -25,6 +25,7 @@
 | hcp_boundary_admin_username | HCP Boundary Cluster Admin Username. | `string` | yes |
 | hcp_vault_cluster_id | The ID of the HCP Vault Cluster. | `string` | yes |
 | hcp_vault_token | The Token of the HCP Vault Cluster. | `string` | yes |
+| project_identifier | Human-readable Project Identifier. | `string` | yes |
 
 ### Outputs
 

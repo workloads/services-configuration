@@ -25,3 +25,8 @@ variable "hcp_vault_token" {
   description = "The Token of the HCP Vault Cluster."
   sensitive   = true
 }
+
+variable "project_identifier" {
+  type        = string
+  description = "Human-readable Project Identifier."
+}
