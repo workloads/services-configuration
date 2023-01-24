@@ -34,6 +34,15 @@
 | vault_kv_v2_vault_mount | Exported Attributes for `module.vault_kv_v2.vault_mount`. |
 <!-- END_TF_DOCS -->
 
+## Notes
+
+1.) This workspace consumes output information from [workloads/services-deployment](https://github.com/workloads/services-deployment) through [Terraform Cloud Workspace Variables](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/variables).
+Specifically, credentials for HCP Boundary and HCP Vault are passed through sensitive variables.
+
+This constraint is intentional. Due to the nature of the deployed services, we opted to maintain token creation in `services-deployment`, as an eligible token should only be provisioned (and made available to `services-configuration`) when all applies inside `services-configuration` succeed.
+
+We believe this approach to provide predictable guardrails, resulting in a more consistent operator experience
+
 ## Author Information
 
 This module is maintained by the contributors listed on [GitHub](https://github.com/workloads/services-configuration/graphs/contributors).
