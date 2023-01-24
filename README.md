@@ -11,9 +11,13 @@
   * [License](#license)
 <!-- TOC -->
 
+<!-- BEGIN_TF_DOCS -->
+
+<!-- END_TF_DOCS -->
+
 ## Author Information
 
-This module is maintained by the contributors listed on [GitHub](https://github.com/workloads/service-configuration/graphs/contributors).
+This module is maintained by the contributors listed on [GitHub](https://github.com/workloads/services-configuration/graphs/contributors).
 
 ## License
 
