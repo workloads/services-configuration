@@ -12,7 +12,18 @@
 <!-- TOC -->
 
 <!-- BEGIN_TF_DOCS -->
+### Inputs
 
+| Name | Description | Type | Required |
+|------|-------------|------|:--------:|
+| hcp_boundary_admin_password | HCP Boundary Cluster Admin Password. | `string` | yes |
+| hcp_boundary_admin_username | HCP Boundary Cluster Admin Username. | `string` | yes |
+| hcp_vault_cluster_id | The ID of the HCP Vault Cluster. | `string` | yes |
+| hcp_vault_token | The Token of the HCP Vault Cluster. | `string` | yes |
+
+### Outputs
+
+No outputs.
 <!-- END_TF_DOCS -->
 
 ## Author Information
