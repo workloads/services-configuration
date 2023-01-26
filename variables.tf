@@ -10,6 +10,8 @@ variable "providers" {
   type = list(object({
     name = string
   }))
+  
+  description = "List of complex objects for delineation of multiple Cloud Service Providers (CSPs)."
 
   default = [
     {
