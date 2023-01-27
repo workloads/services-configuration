@@ -35,7 +35,7 @@
 | Name | Description |
 |------|-------------|
 | boundary_scope_global | Exported Attributes for `boundary_scope.global`. |
-| boundary_scope_project | Exported Attributes for `boundary_scope.project`. |
+| boundary_scope_organization | Exported Attributes for `boundary_scope.organization`. |
 | hcp_boundary_cluster | Exported Attributes for `hcp_boundary_cluster` data source. |
 | hcp_vault_cluster | Exported Attributes for `hcp_vault_cluster` data source. |
 | vault_kv_v2_vault_kv_secret_backend_v2 | Exported Attributes for `module.vault_kv_v2.vault_kv_secret_backend_v2`. |
