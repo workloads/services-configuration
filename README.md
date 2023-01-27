@@ -21,6 +21,7 @@
 
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
+| csp_configuration | Project-wide List of Cloud Service Providers (CSPs). | `string` | yes |
 | hcp_boundary_admin_auth_method_id | HCP Boundary Cluster Admin Auth Method Identifier. | `string` | yes |
 | hcp_boundary_admin_password | HCP Boundary Cluster Admin Password. | `string` | yes |
 | hcp_boundary_admin_username | HCP Boundary Cluster Admin Username. | `string` | yes |
@@ -28,7 +29,6 @@
 | hcp_vault_cluster_id | The ID of the HCP Vault Cluster. | `string` | yes |
 | hcp_vault_token | The Token of the HCP Vault Cluster. | `string` | yes |
 | project_identifier | Human-readable Project Identifier. | `string` | yes |
-| providers | List of complex objects for delineation of multiple Cloud Service Providers (CSPs). | <pre>list(object({<br>    name = string<br>  }))</pre> | no |
 
 ### Outputs
 
