@@ -5,6 +5,25 @@ variable "hcp_boundary_admin_auth_method_id" {
   description = "HCP Boundary Cluster Admin Auth Method Identifier."
 }
 
+variable "csp_configuration" {
+  # The upstream value of `csp_configuration` in `workloads/workspaces` is a complex list of objects.
+  # To allow for processing through TFC, the value is JSON-encoded, resulting in a change of the type to `string`
+  type = string
+
+  description = "Project-wide List of Cloud Service Providers (CSPs)."
+
+  # the default for this variable is set in `workloads/workspaces`
+}
+
+locals {
+  csp_configuration_full = jsondecode(var.csp_configuration)
+
+  # selective CSP Configuration, only contains `enabled` providers
+  csp_configuration = [
+    for key, value in local.csp_configuration_full : local.csp_configuration_full[key] if value.enabled == true
+  ]
+}
+
 # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
 variable "hcp_boundary_admin_username" {
   type        = string
