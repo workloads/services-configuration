@@ -19,7 +19,9 @@ locals {
   csp_configuration_full = jsondecode(var.csp_configuration)
 
   # selective CSP Configuration, only contains `enabled` providers
-  csp_configuration = [for key, value in local.csp_configuration_full : local.csp_configuration_full[key] if value.enabled == true]
+  csp_configuration = [
+    for key, value in local.csp_configuration_full : local.csp_configuration_full[key] if value.enabled == true
+  ]
 }
 
 # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
