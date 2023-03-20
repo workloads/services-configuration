@@ -27,7 +27,7 @@ terraform {
     # see https://registry.terraform.io/providers/hashicorp/vault/3.12.0
     vault = {
       source  = "hashicorp/vault"
-      version = "3.12.0"
+      version = "3.14.0"
     }
   }
 
