@@ -7,6 +7,7 @@
 <!-- TOC -->
 * [Terraform Cloud Workspace `services-configuration`](#terraform-cloud-workspace-services-configuration)
   * [Table of Contents](#table-of-contents)
+  * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
   * [Notes](#notes)
@@ -15,6 +16,12 @@
     * [Inputs](#inputs-1)
     * [Outputs](#outputs-1)
 <!-- TOC -->
+
+## Usage
+
+This repository uses a standard Terraform workflow (`init`, `plan`, `apply`).
+
+For more information, including detailed usage guidelines, see the [Terraform documentation](https://developer.hashicorp.com/terraform/cli/commands).
 
 <!-- BEGIN_TF_DOCS -->
 ### Inputs
