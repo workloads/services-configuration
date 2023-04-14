@@ -1,11 +1,11 @@
-# Terraform Cloud Workspace: `services-configuration`
+# Terraform Cloud Workspace `services-configuration`
 
 > This directory manages the lifecycle of the services configuration for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
 <!-- TOC -->
-* [Terraform Cloud Workspace: `services-configuration`](#terraform-cloud-workspace--services-configuration)
+* [Terraform Cloud Workspace `services-configuration`](#terraform-cloud-workspace-services-configuration)
   * [Table of Contents](#table-of-contents)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
