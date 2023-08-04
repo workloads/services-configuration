@@ -23,7 +23,15 @@ output "boundary_scope_global" {
   value       = boundary_scope.global
 }
 
-output "boundary_scope_project" {
-  description = "Exported Attributes for `boundary_scope.project`."
-  value       = boundary_scope.project
+output "boundary_scope_organization" {
+  description = "Exported Attributes for `boundary_scope.organization`."
+  value       = boundary_scope.organization
 }
+
+#output "boundary_scope_csp_projects" {
+#  description = "Exported Attributes for `boundary_scope.csp_projects`."
+#
+#  value = {
+#    for csp in boundary_scope.csp_projects : csp => csp.name
+#  }
+#}

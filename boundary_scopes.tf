@@ -16,11 +16,18 @@ resource "boundary_scope" "organization" {
 }
 
 # see https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/scope
-resource "boundary_scope" "project" {
-  name        = "AWS"
-  description = "Terraform-managed Boundary Project for AWS."
+resource "boundary_scope" "csp_projects" {
+  # see https://www.terraform.io/docs/language/meta-arguments/for_each.html
+  for_each = {
+    for csp in local.csp_configuration :
+    csp.prefix => csp
+  }
+
+  name        = each.key
+  description = "Terraform-managed Boundary Project for ${each.value.name} (`${each.value.prefix}`)."
   scope_id    = boundary_scope.organization.id
 
   # avoid resources that are not managed by Terraform by disabling automatic creation of roles
-  auto_create_admin_role = false
+  auto_create_admin_role   = false
+  auto_create_default_role = false
 }

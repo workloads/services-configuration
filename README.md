@@ -1,12 +1,13 @@
-# Terraform Cloud Workspace: `services-configuration`
+# Terraform Cloud Workspace `services-configuration`
 
-> This directory manages the lifecycle of the services configuration for [@workloads](https://github.com/workloads).
+> This directory manages Services Configuration for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
 <!-- TOC -->
-* [Terraform Cloud Workspace: `services-configuration`](#terraform-cloud-workspace--services-configuration)
+* [Terraform Cloud Workspace `services-configuration`](#terraform-cloud-workspace-services-configuration)
   * [Table of Contents](#table-of-contents)
+  * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
   * [Notes](#notes)
@@ -16,11 +17,18 @@
     * [Outputs](#outputs-1)
 <!-- TOC -->
 
+## Usage
+
+This repository uses a standard Terraform workflow (`init`, `plan`, `apply`).
+
+For more information, including detailed usage guidelines, see the [Terraform documentation](https://developer.hashicorp.com/terraform/cli/commands).
+
 <!-- BEGIN_TF_DOCS -->
 ### Inputs
 
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
+| csp_configuration | Project-wide List of Cloud Service Providers (CSPs). | `string` | yes |
 | hcp_boundary_admin_auth_method_id | HCP Boundary Cluster Admin Auth Method Identifier. | `string` | yes |
 | hcp_boundary_admin_password | HCP Boundary Cluster Admin Password. | `string` | yes |
 | hcp_boundary_admin_username | HCP Boundary Cluster Admin Username. | `string` | yes |
@@ -34,7 +42,7 @@
 | Name | Description |
 |------|-------------|
 | boundary_scope_global | Exported Attributes for `boundary_scope.global`. |
-| boundary_scope_project | Exported Attributes for `boundary_scope.project`. |
+| boundary_scope_organization | Exported Attributes for `boundary_scope.organization`. |
 | hcp_boundary_cluster | Exported Attributes for `hcp_boundary_cluster` data source. |
 | hcp_vault_cluster | Exported Attributes for `hcp_vault_cluster` data source. |
 | vault_kv_v2_vault_kv_secret_backend_v2 | Exported Attributes for `module.vault_kv_v2.vault_kv_secret_backend_v2`. |
