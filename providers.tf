@@ -7,8 +7,9 @@ provider "hcp" {}
 provider "boundary" {
   addr                            = data.hcp_boundary_cluster.main.cluster_url
   auth_method_id                  = var.hcp_boundary_admin_auth_method_id
-  password_auth_method_login_name = var.hcp_boundary_admin_username
-  password_auth_method_password   = var.hcp_boundary_admin_password
+  auth_method_login_name = "cluster-admin"            #var.hcp_boundary_admin_username
+  auth_method_password   = "UJEX3jKqQGL6jgQwKwuuEJwA" # var.hcp_boundary_admin_username
+  scope_id               = "global"
 }
 
 # ⚠️ Note that this will persist a Vault Admin Token to Terraform State.
