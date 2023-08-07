@@ -35,6 +35,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | hcp_boundary_cluster_id | The ID of the HCP Boundary Cluster. | `string` | yes |
 | hcp_vault_cluster_id | The ID of the HCP Vault Cluster. | `string` | yes |
 | hcp_vault_token | The Token of the HCP Vault Cluster. | `string` | yes |
+| management_region_google | Google-specific `Management` Region Identifier. | `string` | yes |
 | project_identifier | Human-readable Project Identifier. | `string` | yes |
 
 ### Outputs
