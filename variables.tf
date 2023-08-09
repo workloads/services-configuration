@@ -1,9 +1,3 @@
-# see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
-variable "hcp_boundary_admin_auth_method_id" {
-  type        = string
-  description = "HCP Boundary Cluster Admin Auth Method Identifier."
-}
-
 variable "csp_configuration" {
   # The upstream value of `csp_configuration` in `workloads/workspaces` is a complex list of objects.
   # To allow for processing through TFC, the value is JSON-encoded, resulting in a change of the type to `string`
@@ -24,9 +18,9 @@ locals {
 }
 
 # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
-variable "hcp_boundary_admin_username" {
+variable "hcp_boundary_admin_auth_method_id" {
   type        = string
-  description = "HCP Boundary Cluster Admin Username."
+  description = "HCP Boundary Cluster Admin Auth Method Identifier."
 }
 
 # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#password
@@ -34,6 +28,12 @@ variable "hcp_boundary_admin_password" {
   type        = string
   description = "HCP Boundary Cluster Admin Password."
   sensitive   = true
+}
+
+# see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
+variable "hcp_boundary_admin_username" {
+  type        = string
+  description = "HCP Boundary Cluster Admin Username."
 }
 
 # this value is set in the `Boundary` Variable Set, inside Terraform Cloud

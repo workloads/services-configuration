@@ -5,10 +5,10 @@ provider "hcp" {}
 # ⚠️ Note that this will persist a Boundary Admin Token to Terraform State.
 # see https://registry.terraform.io/providers/hashicorp/boundary/latest/docs
 provider "boundary" {
-  auth_method_id                  = var.hcp_boundary_admin_auth_method_id
   addr = data.hcp_boundary_cluster.main.cluster_url
+  #auth_method_id         = var.hcp_boundary_admin_auth_method_id
   auth_method_login_name = "cluster-admin"            #var.hcp_boundary_admin_username
-  auth_method_password   = "UJEX3jKqQGL6jgQwKwuuEJwA" # var.hcp_boundary_admin_username
+  auth_method_password   = var.hcp_boundary_admin_username
   scope_id               = "global"
 }
 
