@@ -26,10 +26,10 @@ terraform {
       version = ">= 0.69.0, < 1.0.0"
     }
 
-    # see https://registry.terraform.io/providers/hashicorp/vault/3.18.0/
+    # see https://registry.terraform.io/providers/hashicorp/vault/3.20.0/
     vault = {
       source  = "hashicorp/vault"
-      version = ">= 3.18.0, < 4.0.0"
+      version = ">= 3.20.0, < 4.0.0"
     }
   }
 
