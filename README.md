@@ -29,7 +29,6 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
 | csp_configuration | Project-wide List of Cloud Service Providers (CSPs). | `string` | yes |
-| hcp_boundary_admin_auth_method_id | HCP Boundary Cluster Admin Auth Method Identifier. | `string` | yes |
 | hcp_boundary_admin_password | HCP Boundary Cluster Admin Password. | `string` | yes |
 | hcp_boundary_admin_username | HCP Boundary Cluster Admin Username. | `string` | yes |
 | hcp_boundary_cluster_id | The ID of the HCP Boundary Cluster. | `string` | yes |

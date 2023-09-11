@@ -14,6 +14,12 @@ terraform {
 
   # see https://developer.hashicorp.com/terraform/language/settings#specifying-provider-requirements
   required_providers {
+    # see https://registry.terraform.io/providers/hashicorp/aws/5.16.1
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.16.1, < 6.0.0"
+    }
+
     # see https://registry.terraform.io/providers/hashicorp/boundary/1.1.9/
     boundary = {
       source  = "hashicorp/boundary"

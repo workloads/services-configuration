@@ -16,7 +16,18 @@ variable "auth0_domain" {
   description = "Auth0 Domain Name."
 }
 
-# The upstream value of `csp_configuration` in `workloads/workspaces` is a complex list of objects.
+variable "aws_access_key" {
+  type        = string
+  description = "AWS Access Key."
+  sensitive   = true
+}
+
+variable "aws_secret_access_key" {
+  type        = string
+  description = "AWS Secret Access Key."
+  sensitive   = true
+}
+
 # To allow for processing through TFC, the value is JSON-encoded, resulting in a change of the type to `string`
 variable "csp_configuration" {
   type = list(object({
@@ -48,12 +59,6 @@ variable "google_project_id" {
   description = "The Project ID to use for authenticating with GCP."
 }
 
-# see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
-variable "hcp_boundary_admin_auth_method_id" {
-  type        = string
-  description = "HCP Boundary Cluster Admin Auth Method Identifier."
-}
-
 # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#password
 variable "hcp_boundary_admin_password" {
   type        = string
@@ -65,6 +70,11 @@ variable "hcp_boundary_admin_password" {
 variable "hcp_boundary_admin_username" {
   type        = string
   description = "HCP Boundary Cluster Admin Username."
+}
+
+variable "hcp_boundary_admin_auth_method_id" {
+  type        = string
+  description = "The ID of the (primary) HCP Boundary Cluster Auth Method."
 }
 
 # this value is set in the `Boundary` Variable Set, inside Terraform Cloud

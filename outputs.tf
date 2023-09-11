@@ -1,3 +1,10 @@
+output "datadog_urls" {
+  description = "URLs for Datadog Services."
+
+  value = {
+    hcp_streaming_logs = "https://app.datadoghq.com/logs?query=service%3A%22HCP%20-%20HCP-Streaming%22"
+  }
+}
 output "hcp_vault_cluster" {
   description = "Exported Attributes for `hcp_vault_cluster` data source."
   value       = data.hcp_vault_cluster.main
