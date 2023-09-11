@@ -16,10 +16,14 @@ variable "auth0_domain" {
   description = "Auth0 Domain Name."
 }
 
+# The upstream value of `csp_configuration` in `workloads/workspaces` is a complex list of objects.
+# To allow for processing through TFC, the value is JSON-encoded, resulting in a change of the type to `string`
 variable "csp_configuration" {
-  # The upstream value of `csp_configuration` in `workloads/workspaces` is a complex list of objects.
-  # To allow for processing through TFC, the value is JSON-encoded, resulting in a change of the type to `string`
-  type = string
+  type = list(object({
+    name    = string
+    prefix  = string
+    enabled = bool
+  }))
 
   description = "Project-wide List of Cloud Service Providers (CSPs)."
 
@@ -27,12 +31,18 @@ variable "csp_configuration" {
 }
 
 locals {
-  csp_configuration_full = jsondecode(var.csp_configuration)
+  csp_configuration_full = var.csp_configuration
 
   # selective CSP Configuration, only contains `enabled` providers
-  csp_configuration = [
-    for key, value in local.csp_configuration_full : local.csp_configuration_full[key] if value.enabled == true
-  ]
+  # assigning `value` as the full value of each object results in duplication of `value.prefix` in the output
+  # but it allows for easier consumption of the `value.prefix` because it foregoes approaches such as `keys()`
+  csp_configuration = tomap({
+    for value in local.csp_configuration_full :
+    value.prefix => value
+    if value.enabled == true
+  })
+}
+
 variable "google_project_id" {
   type        = string
   description = "The Project ID to use for authenticating with GCP."
