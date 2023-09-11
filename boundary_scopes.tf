@@ -25,7 +25,7 @@ resource "boundary_scope" "csp_projects" {
     csp.prefix => csp
   }
 
-  name        = each.key
+  name        = upper(each.key)
   description = "Terraform-managed Scope for ${each.value.name} (`${each.value.prefix}`)."
   scope_id    = boundary_scope.organization.scope_id
 

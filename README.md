@@ -28,7 +28,14 @@ For more information, including detailed usage guidelines, see the [Terraform do
 
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
-| csp_configuration | Project-wide List of Cloud Service Providers (CSPs). | `string` | yes |
+| auth0_client_id | Auth0 Client ID. | `string` | yes |
+| auth0_client_secret | Auth0 Client Secret. | `string` | yes |
+| auth0_domain | Auth0 Domain Name. | `string` | yes |
+| aws_access_key | AWS Access Key. | `string` | yes |
+| aws_secret_access_key | AWS Secret Access Key. | `string` | yes |
+| csp_configuration | Project-wide List of Cloud Service Providers (CSPs). | <pre>list(object({<br>    name    = string<br>    prefix  = string<br>    enabled = bool<br>  }))</pre> | yes |
+| google_project_id | The Project ID to use for authenticating with GCP. | `string` | yes |
+| hcp_boundary_admin_auth_method_id | The ID of the (primary) HCP Boundary Cluster Auth Method. | `string` | yes |
 | hcp_boundary_admin_password | HCP Boundary Cluster Admin Password. | `string` | yes |
 | hcp_boundary_admin_username | HCP Boundary Cluster Admin Username. | `string` | yes |
 | hcp_boundary_cluster_id | The ID of the HCP Boundary Cluster. | `string` | yes |
@@ -44,6 +51,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 |------|-------------|
 | boundary_scope_global | Exported Attributes for `boundary_scope.global`. |
 | boundary_scope_organization | Exported Attributes for `boundary_scope.organization`. |
+| datadog_urls | URLs for Datadog Services. |
 | hcp_boundary_cluster | Exported Attributes for `hcp_boundary_cluster` data source. |
 | hcp_vault_cluster | Exported Attributes for `hcp_vault_cluster` data source. |
 | vault_kv_v2_vault_kv_secret_backend_v2 | Exported Attributes for `module.vault_kv_v2.vault_kv_secret_backend_v2`. |

@@ -6,8 +6,8 @@ resource "boundary_user" "admin" {
 
 # see https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/role
 resource "boundary_role" "cluster_admin" {
-  name          = boundary_user.admin.name
-  description   = "Admin User."
+  name        = boundary_user.admin.name
+  description = "Admin User."
 
   principal_ids = [
     boundary_user.admin.id
@@ -17,5 +17,5 @@ resource "boundary_role" "cluster_admin" {
     "id=*;type=*;actions=*"
   ]
 
-  scope_id      = boundary_scope.global.id
+  scope_id = boundary_scope.global.id
 }
