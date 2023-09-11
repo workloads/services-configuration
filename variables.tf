@@ -1,3 +1,21 @@
+# see https://registry.terraform.io/providers/auth0/auth0/latest/docs#client_id
+variable "auth0_client_id" {
+  type        = string
+  description = "Auth0 Client ID."
+}
+
+# see https://registry.terraform.io/providers/auth0/auth0/latest/docs#client_secret
+variable "auth0_client_secret" {
+  type        = string
+  description = "Auth0 Client Secret."
+}
+
+# see https://registry.terraform.io/providers/auth0/auth0/latest/docs#domain
+variable "auth0_domain" {
+  type        = string
+  description = "Auth0 Domain Name."
+}
+
 variable "csp_configuration" {
   # The upstream value of `csp_configuration` in `workloads/workspaces` is a complex list of objects.
   # To allow for processing through TFC, the value is JSON-encoded, resulting in a change of the type to `string`
@@ -15,6 +33,9 @@ locals {
   csp_configuration = [
     for key, value in local.csp_configuration_full : local.csp_configuration_full[key] if value.enabled == true
   ]
+variable "google_project_id" {
+  type        = string
+  description = "The Project ID to use for authenticating with GCP."
 }
 
 # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/resources/boundary_cluster#username
