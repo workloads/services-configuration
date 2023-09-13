@@ -8,13 +8,13 @@ resource "boundary_scope" "global" {
 
 # see https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/scope
 resource "boundary_scope" "organization" {
-  name        = var.project_identifier
+  name        = title(var.project_identifier)
   description = "Terraform-managed Scope for `${var.project_identifier}`."
   scope_id    = boundary_scope.global.id
 
   # avoid resources that are not managed by Terraform by disabling automatic creation of roles
-  auto_create_admin_role   = false
-  auto_create_default_role = false
+  auto_create_admin_role   = true
+  auto_create_default_role = true
 }
 
 # see https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/scope
