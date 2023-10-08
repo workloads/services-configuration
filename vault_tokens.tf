@@ -6,8 +6,6 @@ resource "vault_token" "csp_projects" {
     csp.prefix => csp
   }
 
-  display_name = "Token for Boundary Project for ${each.value.name} (CSP: `${each.value.prefix}`)."
-
   metadata = {
     "purpose"         = "service-account"
     "provider-prefix" = each.value.prefix

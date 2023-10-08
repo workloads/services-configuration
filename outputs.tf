@@ -8,6 +8,12 @@ output "boundary_scope_organization" {
   value       = boundary_scope.organization
 }
 
+output "boundary_scopes_csps" {
+  description = "Exported Attributes for `module.boundary_csp_projects.boundary_scope`."
+  value       = module.boundary_csp_projects
+  sensitive   = true
+}
+
 output "datadog_urls" {
   description = "URLs for Datadog Services."
 
