@@ -1,21 +1,31 @@
 # Terraform Cloud Workspace `services-configuration`
 
-> This directory manages Services Configuration for [@workloads](https://github.com/workloads).
+> This repository manages services configuration for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
 <!-- TOC -->
 * [Terraform Cloud Workspace `services-configuration`](#terraform-cloud-workspace-services-configuration)
   * [Table of Contents](#table-of-contents)
+  * [Requirements](#requirements)
+    * [Development](#development)
   * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
   * [Notes](#notes)
   * [Author Information](#author-information)
   * [License](#license)
-    * [Inputs](#inputs-1)
-    * [Outputs](#outputs-1)
 <!-- TOC -->
+
+## Requirements
+
+- HashiCorp Terraform `1.6.x` or [newer](https://developer.hashicorp.com/terraform/downloads)
+
+### Development
+
+For development and testing of this repository:
+
+- `terraform-docs` `0.17.0` or [newer](https://terraform-docs.io/user-guide/installation/)
 
 ## Usage
 
@@ -51,6 +61,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 |------|-------------|
 | boundary_scope_global | Exported Attributes for `boundary_scope.global`. |
 | boundary_scope_organization | Exported Attributes for `boundary_scope.organization`. |
+| boundary_scopes_csps | Exported Attributes for `module.boundary_csp_projects.boundary_scope`. |
 | datadog_urls | URLs for Datadog Services. |
 | hcp_boundary_cluster | Exported Attributes for `hcp_boundary_cluster` data source. |
 | hcp_vault_cluster | Exported Attributes for `hcp_vault_cluster` data source. |
