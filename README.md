@@ -13,7 +13,7 @@
     * [Inputs](#inputs)
     * [Outputs](#outputs)
   * [Notes](#notes)
-  * [Author Information](#author-information)
+  * [Contributors](#contributors)
   * [License](#license)
 <!-- TOC -->
 
@@ -78,30 +78,14 @@ This constraint is intentional. Due to the nature of the deployed services, we o
 
 We believe this approach to provide predictable guardrails, resulting in a more consistent operator experience
 
-## Author Information
+## Contributors
 
-This module is maintained by the contributors listed on [GitHub](https://github.com/workloads/services-configuration/graphs/contributors).
+For a list of current (and past) contributors to this repository, see [GitHub](https://github.com/workloads/services-configuration/graphs/contributors).
 
 ## License
 
 Licensed under the Apache License, Version 2.0 (the "License").
 
-You may obtain a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an _"AS IS"_ basis, without WARRANTIES or conditions of any kind, either express or implied.
+You may download a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 See the License for the specific language governing permissions and limitations under the License.
-
-<!-- BEGIN_TF_DOCS -->
-### Inputs
-
-| Name | Description | Type | Required |
-|------|-------------|------|:--------:|
-| hcp_boundary_admin_password | HCP Boundary Cluster Admin Password. | `string` | yes |
-| hcp_boundary_admin_username | HCP Boundary Cluster Admin Username. | `string` | yes |
-| hcp_vault_cluster_id | The ID of the HCP Vault Cluster. | `string` | yes |
-
-### Outputs
-
-No outputs.
-<!-- END_TF_DOCS -->
