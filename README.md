@@ -1,4 +1,4 @@
-# Terraform Cloud Workspace `services-configuration`
+# HCP Terraform Workspace `services-configuration`
 
 > This repository manages services configuration for [@workloads](https://github.com/workloads).
 
@@ -19,13 +19,13 @@
 
 ## Requirements
 
-- HashiCorp Terraform `1.6.x` or [newer](https://developer.hashicorp.com/terraform/downloads)
+- HashiCorp Terraform `1.9.x` or [newer](https://developer.hashicorp.com/terraform/downloads)
 
 ### Development
 
 For development and testing of this repository:
 
-- `terraform-docs` `0.17.0` or [newer](https://terraform-docs.io/user-guide/installation/)
+- `terraform-docs` `0.18.0` or [newer](https://terraform-docs.io/user-guide/installation/)
 
 ## Usage
 
