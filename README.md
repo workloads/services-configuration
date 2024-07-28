@@ -5,7 +5,7 @@
 ## Table of Contents
 
 <!-- TOC -->
-* [Terraform Cloud Workspace `services-configuration`](#terraform-cloud-workspace-services-configuration)
+* [HCP Terraform Workspace `services-configuration`](#hcp-terraform-workspace-services-configuration)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
     * [Development](#development)
@@ -71,7 +71,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 
 ## Notes
 
-1.) This workspace consumes output information from [workloads/services-deployment](https://github.com/workloads/services-deployment) through [Terraform Cloud Workspace Variables](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/variables).
+1.) This workspace consumes output information from [workloads/services-deployment](https://github.com/workloads/services-deployment) through [HCP Terraform Workspace Variables](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/variables).
 Specifically, credentials for HCP Boundary and HCP Vault are passed through sensitive variables.
 
 This constraint is intentional. Due to the nature of the deployed services, we opted to maintain token creation in `services-deployment`, as an eligible token should only be provisioned (and made available to `services-configuration`) when all applies inside `services-configuration` succeed.
