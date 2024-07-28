@@ -78,21 +78,21 @@ variable "hcp_boundary_admin_auth_method_id" {
 }
 
 # this value is set in the `Boundary` Variable Set, inside HCP Terraform
-# see https://app.terraform.io/app/workloads/settings/varsets/
+# see https://app.terraform.io/app/workloads/settings/varsets
 variable "hcp_boundary_cluster_id" {
   type        = string
   description = "The ID of the HCP Boundary Cluster."
 }
 
 # this value is set in the `Vault` Variable Set, inside HCP Terraform
-# see https://app.terraform.io/app/workloads/settings/varsets/
+# see https://app.terraform.io/app/workloads/settings/varsets
 variable "hcp_vault_cluster_id" {
   type        = string
   description = "The ID of the HCP Vault Cluster."
 }
 
 # this value is set in the `Vault` Variable Set, inside HCP Terraform
-# see https://app.terraform.io/app/workloads/settings/varsets/
+# see https://app.terraform.io/app/workloads/settings/varsets
 variable "hcp_vault_token" {
   type        = string
   description = "The Token of the HCP Vault Cluster."

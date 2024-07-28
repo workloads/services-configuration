@@ -1,12 +1,10 @@
 terraform {
-  # see https://developer.hashicorp.com/terraform/language/settings/terraform-cloud
+  # see https://developer.hashicorp.com/terraform/language/settings/cloud
   cloud {
-    # see https://app.terraform.io/app/workloads/workspaces
-    # and https://developer.hashicorp.com/terraform/cli/cloud/settings#organization
+    # see https://developer.hashicorp.com/terraform/cli/cloud/settings#organization
     organization = "workloads"
 
-    # see https://app.terraform.io/app/workloads/services-configuration
-    # and https://developer.hashicorp.com/terraform/cli/cloud/settings#workspaces
+    # see https://developer.hashicorp.com/terraform/cli/cloud/settings#workspaces
     workspaces {
       name = "services-configuration"
     }
@@ -32,10 +30,10 @@ terraform {
       version = ">= 0.94.0, < 1.0.0"
     }
 
-    # see https://registry.terraform.io/providers/hashicorp/vault/4.3.0
+    # see https://registry.terraform.io/providers/hashicorp/vault/3.25.0
     vault = {
       source  = "hashicorp/vault"
-      version = ">= 4.3.0, < 5.0.0"
+      version = ">= 3.25.0, < 4.0.0"
     }
   }
 

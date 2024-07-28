@@ -32,6 +32,11 @@ output "hcp_vault_cluster" {
   value       = data.hcp_vault_cluster.main
 }
 
+output "tfe_workspace_terraform_version" {
+  description = "Terraform version identifier of current HCP Terraform Workspace."
+  value       = data.tfe_workspace.main.terraform_version
+}
+
 output "vault_kv_v2_vault_mount" {
   description = "Exported Attributes for `module.vault_kv_v2.vault_mount`."
   value       = module.vault_kv_v2.vault_mount
